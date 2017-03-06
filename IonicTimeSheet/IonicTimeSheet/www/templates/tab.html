@@ -1,27 +1,47 @@
 ﻿<script id="templates/tab.html" type="text/ng-template">
-    <ion-view view-title="Tab" >
-        <ion-content padding="true">
-                <ion-tabs class="tabs-positive tabs-icon-only tabs-icon-top">
-                  <ion-tab title="Tabs" font-size="50px">
-                   
-                </ion-tab>
+    <ion-view>
+
+
+        <ion-content class="assertive" style="margin-top:-50px">
+
+
+            <ion-tabs class="tabs-positive">
+                <a href="" class="button button-clear button-light buttons-right col-offset-50" style="font-weight:bold">Add New</a>
+                <!-- <ion-tab title="Tab" style="list-style-position-c"></ion-tab>-->
+
             </ion-tabs>
 
             <p class="title">&nbsp;</p>
             <p class="title">&nbsp;</p>
             <p class="title">&nbsp;</p>
             <p class="title">&nbsp;</p>
-           <a href="#/timesheet" class="button button-block button-balanced" type="submit">
-                TimeSheet
-            </a>
             <p class="title">&nbsp;</p>
-            <a href="#/placement" class="button button-block button-balanced" type="submit">
-                Placement
-            </a>
-             <p class="title">&nbsp;</p>
-            <a href="#/profile" class="button button-block button-balanced" type="submit">
-                Profile
-            </a>
+
+            <ion-item>
+                <ion-label>Date</ion-label>
+                <ion-datetime displayFormat="MMMM YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate">
+                </ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Day</ion-label>
+                <ion-datetime displayFormat="MMMM YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate">
+                </ion-datetime>
+            </ion-item>
+
+
+
+
+            <div class="tabs-striped tabs-icon-bottom tabs-background-calm tabs-color-light">
+                <div class="tabs tabs-icon-only ">
+                    <!--<a class="button button-clear button-light" style="font-weight:bold">TimeSheet</a>-->
+                    <a class="button button-clear button-assertive button-bar-inline" style="font-weight:bold">TimeSheet</a>
+
+                    <a  href="#placement" class="button button-clear button-light" style="font-weight:bold">Placements</a>
+
+                    <a href="#settings" class="button button-clear button-light" style="font-weight:bold">Settings</a>
+                </div>
+            </div>
         </ion-content>
-    </ion-view>
+</ion-view>
 </script>
